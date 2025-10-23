@@ -1,6 +1,7 @@
 ROBOT = "go2" # Robot name, "go2", "b2", "b2w", "h1", "go2w", "g1" 
-ROBOT_SCENE = "../unitree_robots/" + ROBOT + "/scene.xml" # Robot scene
-DOMAIN_ID = 1 # Domain id
+import os
+ROBOT_SCENE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "unitree_robots", ROBOT, "scene.xml") # Robot scene
+DOMAIN_ID = 0 # Domain id
 INTERFACE = "lo" # Interface 
 
 USE_JOYSTICK = 1 # Simulate Unitree WirelessController using a gamepad

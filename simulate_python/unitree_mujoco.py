@@ -27,7 +27,7 @@ if config.ENABLE_ELASTIC_BAND:
         show_left_ui=False, show_right_ui=False,
     )
 else:
-    viewer = mujoco.viewer.launch_passive(mj_model, mj_data)
+    viewer = mujoco.viewer.launch_passive(mj_model, mj_data, show_left_ui=False, show_right_ui=False)
 
 mj_model.opt.timestep = config.SIMULATE_DT
 num_motor_ = mj_model.nu
