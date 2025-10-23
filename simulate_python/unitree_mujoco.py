@@ -23,7 +23,8 @@ if config.ENABLE_ELASTIC_BAND:
     else:
         band_attached_link = mj_model.body("base_link").id
     viewer = mujoco.viewer.launch_passive(
-        mj_model, mj_data, key_callback=elastic_band.MujuocoKeyCallback
+        mj_model, mj_data, key_callback=elastic_band.MujuocoKeyCallback,
+        show_left_ui=False, show_right_ui=False,
     )
 else:
     viewer = mujoco.viewer.launch_passive(mj_model, mj_data)
